@@ -16,5 +16,11 @@ export const api = [
     address: "Africa in Jungle",
     descrption: "Forest Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
     btn: "Share"
+  },
+  {
+    title:"Snow Mountain",
+    address: "Yakutsk, Russia",
+    descrption: "Snow Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
+    btn: "Share"
   }
 ]
