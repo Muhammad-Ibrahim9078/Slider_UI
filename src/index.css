@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+#text{
+    font-family: bebas;
+}
+
+
+@font-face {
+    font-family: "bebas";
+    src: url("Fonts/bebas-neue/BebasNeue-Regular.ttf");
+}
