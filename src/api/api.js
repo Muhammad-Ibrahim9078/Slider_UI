@@ -22,5 +22,11 @@ export const api = [
     address: "Yakutsk, Russia",
     descrption: "Snow Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
     btn: "Share"
+  },
+  {
+    title:"Cyling on Mountain",
+    address: "chinakor, Russia",
+    descrption: "Cyling on Mountain Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
+    btn: "Please"
   }
 ]

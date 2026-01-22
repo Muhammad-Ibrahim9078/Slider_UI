@@ -5,11 +5,10 @@ import { HiArrowUpRight } from "react-icons/hi2";
 const Header = () => {
   return (
     <header
-      className="w-full h-[90px] flex flex-wrap items-center justify-between px-10
-      bg-cover bg-center"
+      className="fixed top-0 left-0 w-full h-[90px] flex items-center justify-between px-10
+      bg-cover bg-center z-50 relative"
     >
-      {/* Overlay */}
-      <div className=" inset-0 bg-black/50"></div>
+      
 
       {/* Left Logo */}
       <div className="relative z-10 flex items-center gap-3">
@@ -23,8 +22,8 @@ const Header = () => {
 
       {/* Center Menu */}
       <nav className="relative z-10">
-        <ul className="flex flex-wra gap-10 text-white font-medium">
-          <li className=" text-yellow-400">
+        <ul className="flex gap-10 text-white font-medium">
+          <li className="relative text-yellow-400 cursor-pointer">
             Home
             <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 w-6 h-[2px] bg-yellow-400 rounded-full"></span>
           </li>
