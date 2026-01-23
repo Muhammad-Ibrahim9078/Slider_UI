@@ -28,5 +28,23 @@ export const api = [
     address: "chinakor, Russia",
     descrption: "Cyling on Mountain Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
     btn: "Please"
+  },
+  {
+    title:"Cloud around Mountain",
+    address: "Malir, Korangi",
+    descrption: "Cloud around Mountain Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
+    btn: "Please"
+  },
+  {
+    title:"Mountain Lake",
+    address: "Naran, Kagan",
+    descrption: "Mountain Lake Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
+    btn: "Please"
+  },
+  {
+    title:"Karakaram Mountain",
+    address: "China, Pakistan",
+    descrption: "Karakaram Mountain Mountain Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim sapiente tempora nihil, ipsum, accusamus excepturi rerum laudantium et at similique, sit molestias. Itaque neque fuga minus quam sit molestiae impedit.",
+    btn: "Please"
   }
 ]

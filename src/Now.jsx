@@ -9,9 +9,9 @@ import img2 from "../public/image 1.jfif";
 import img3 from "../public/image 3.jfif";
 import img4 from "../public/img4.jpg";
 import img5 from "../public/img 5.avif";
-import img6 from "../public/img 6.webp";
-import img7 from "../public/img 7.jpg";
-import img8 from "../public/img 8.webp";
+import img6 from "../public/image 3.jfif";
+import img7 from "../public/img4.jpg";
+import img8 from "../public/img 5.avif";
 import IndexNo from "./components/IndexNo";
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
     setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  // only indexes
   const visibleCards = [];
   for (let i = 0; i < 4; i++) {
     visibleCards.push((activeIndex + i) % images.length);
@@ -34,7 +35,7 @@ function App() {
   return (
     <div className="w-full h-screen relative overflow-hidden bg-black">
 
-      {/* FULL SCREEN ACTIVE CARD */}
+      {/* FULLSCREEN ACTIVE CARD */}
       <AnimatePresence>
         <motion.div
           key={activeIndex}
@@ -45,9 +46,9 @@ function App() {
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
-          initial={{ opacity: 0.6, scale: 0.95 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0.6, scale: 0.95 }}
+          initial={{ scale: 0.96, opacity: 0.6 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.96, opacity: 0.6 }}
           transition={{ duration: 0.9, ease: "easeInOut" }}
         />
       </AnimatePresence>
@@ -74,12 +75,15 @@ function App() {
               <p className="uppercase tracking-widest text-sm">
                 {api[activeIndex].address}
               </p>
-              <h1 className="text-8xl font-bold mt-3" id="text">
+
+              <h1 className="text-8xl font-bold mt-3">
                 {api[activeIndex].title}
               </h1>
+
               <p className="mt-4 text-gray-200">
                 {api[activeIndex].descrption}
               </p>
+
               <button className="bg-white text-black rounded-2xl w-40 p-3 mt-6 font-bold hover:scale-110 transition">
                 {api[activeIndex].btn}
               </button>
@@ -87,25 +91,31 @@ function App() {
           </AnimatePresence>
 
           {/* RIGHT CARDS */}
-          <div className="flex gap-4 items-center relative h-72">
-            {visibleCards.map((index) => {
-              if (index === activeIndex) return null; // 🔥 IMPORTANT
+          <div className="relative w-[720px] h-72 overflow-hidden">
+            <AnimatePresence initial={false}>
+              {visibleCards.map((index, pos) => {
+                if (index === activeIndex) return null;
 
-              return (
-                <motion.div
-                  key={index}
-                  layoutId={`image-${index}`}
-                  onClick={() => setActiveIndex(index)}
-                  transition={{ duration: 0.9, ease: "easeInOut" }}
-                  className="w-52 h-72 rounded-xl cursor-pointer shadow-2xl z-30"
-                  style={{
-                    backgroundImage: `url(${images[index]})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                />
-              );
-            })}
+                return (
+                  <motion.div
+                    key={index}
+                    layoutId={`image-${index}`}
+                    onClick={() => setActiveIndex(index)}
+                    className="absolute w-52 h-72 rounded-xl cursor-pointer shadow-2xl"
+                    style={{
+                      left: pos * 220,
+                      backgroundImage: `url(${images[index]})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
+                    initial={{ x: 220, opacity: 0 }}   // 👉 clean enter
+                    animate={{ x: 0, opacity: 1 }}     // 👉 settle
+                    exit={{ x: -220, opacity: 0.6 }}     // 👉 clean exit
+                    transition={{ duration: 0.2, ease: "easeOut" }}
+                  />
+                );
+              })}
+            </AnimatePresence>
           </div>
         </section>
 
