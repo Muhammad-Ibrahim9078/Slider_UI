@@ -16,7 +16,7 @@ const Header = () => {
           <span className="text-white font-bold text-lg">◎</span>
         </div>
         <h1 className="text-white text-xl font-semibold tracking-wide">
-          GLOBE EXPRESS
+          NUVIX – Services & Solutions
         </h1>
       </div>
 

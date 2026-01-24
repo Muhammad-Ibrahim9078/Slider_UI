@@ -11,11 +11,10 @@ import img4 from "../public/img4.jpg";
 import img5 from "../public/img 5.avif";
 import img6 from "../public/img 6.webp";
 import img7 from "../public/img 7.jpg";
-import img8 from "../public/img 8.webp";
 import IndexNo from "./components/IndexNo";
 
 function App() {
-  const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+  const images = [img1, img2, img3, img4, img5, img6, img7];
   const [activeIndex, setActiveIndex] = useState(0);
 
   const nextSlide = () => {
@@ -87,7 +86,7 @@ function App() {
           </AnimatePresence>
 
           {/* RIGHT CARDS */}
-          <div className="flex gap-4 items-center relative h-72">
+          <motion.div className="flex gap-4 items-center relative h-72">
             {visibleCards.map((index) => {
               if (index === activeIndex) return null; // 🔥 IMPORTANT
 
@@ -106,7 +105,7 @@ function App() {
                 />
               );
             })}
-          </div>
+          </motion.div>
         </section>
 
         {/* CONTROLS */}
