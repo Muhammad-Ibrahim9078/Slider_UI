@@ -1,7 +1,7 @@
 export const api = [
   {
     title: "NUVIX – Services & Solutions",
-    address: "Pakistan, Amrica, UAE",
+    address: "Services & Solutions",
     descrption:
       "At NUVIX, we provide end-to-end IT services and technology solutions that help businesses innovate, scale, and stay competitive. From software and hardware to cloud, security, and consulting, we deliver reliable, future-ready IT ecosystems.",
     btn: "Learn More"

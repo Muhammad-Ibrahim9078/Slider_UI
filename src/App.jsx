@@ -3,14 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 import Header from "./components/Header";
 import { api } from "./api/api";
+import Loading from "./components/Loading"
 
-import img1 from "../public/image 2.jfif";
-import img2 from "../public/image 1.jfif";
-import img3 from "../public/image 3.jfif";
-import img4 from "../public/img4.jpg";
-import img5 from "../public/img 5.avif";
-import img6 from "../public/img 6.webp";
-import img7 from "../public/img 7.jpg";
+import img1 from "../public/computers.jpg";
+import img2 from "../public/earth.jpg";
+import img3 from "../public/hardware.jpg";
+import img4 from "../public/cloud.jpg";
+import img5 from "../public/itSolution.avif";
+import img6 from "../public/securtiy.png";
+import img7 from "../public/whychoose.png";
 import IndexNo from "./components/IndexNo";
 
 function App() {
@@ -52,11 +53,12 @@ function App() {
       </AnimatePresence>
 
       {/* OVERLAY */}
-      <div className="absolute inset-0 bg-black/40 z-10" />
+      <div className="absolute inset-0 bg-black/60 z-10" />
 
       {/* CONTENT */}
       <div className="relative z-20 flex flex-col justify-between h-full p-8">
         <Header />
+          <Loading activeIndex={activeIndex} setActiveIndex={setActiveIndex}/>
 
         <section className="flex justify-between gap-6 mt-5">
 
@@ -96,7 +98,7 @@ function App() {
                   layoutId={`image-${index}`}
                   onClick={() => setActiveIndex(index)}
                   transition={{ duration: 0.9, ease: "easeInOut" }}
-                  className="w-52 h-72 rounded-xl cursor-pointer shadow-2xl z-30"
+                  className="w-52 h-72 rounded-xl cursor-pointer shadow-3xl shadow-black-500 z-30"
                   style={{
                     backgroundImage: `url(${images[index]})`,
                     backgroundSize: "cover",
