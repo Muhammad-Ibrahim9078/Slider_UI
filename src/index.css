@@ -9,3 +9,26 @@
     font-family: "bebas";
     src: url("Fonts/bebas-neue/BebasNeue-Regular.ttf");
 }
+
+
+@media (min-width: 300px) and (max-width: 450px) {
+
+    #forMobile{
+        position: absolute;
+        justify-content: center;
+        bottom: -15px;
+    }
+
+    #text{
+        font-size: 65px;
+    }
+
+    #margin{
+        margin-top: 80px;
+    }
+
+    #cards{
+        visibility: hidden;
+    }
+
+}
