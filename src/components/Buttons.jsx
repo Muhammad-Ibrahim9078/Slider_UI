@@ -7,11 +7,11 @@ function Buttons({ onPrev, onNext }) {
       {/* Previous Button */}
       <button
         onClick={onPrev}
-        className="w-20 h-20 flex items-center justify-center cursor-pointer
-                   text-white text-2xl 
+        className="w-15 h-15 flex items-center justify-center cursor-pointer
+                   text-white bg-white/20 text-2xl 
                    border border-white 
                    rounded-full 
-                   hover:scale-110 transition"
+                   hover:scale-105 transition"
       >
         <FaLessThan />
       </button>
@@ -19,11 +19,11 @@ function Buttons({ onPrev, onNext }) {
       {/* Next Button */}
       <button
         onClick={onNext}
-        className="w-20 h-20 flex items-center justify-center cursor-pointer
-                   text-white text-2xl 
+        className="w-15 h-15 flex items-center justify-center cursor-pointer
+                   text-white bg-white/20 text-2xl 
                    border border-white 
                    rounded-full 
-                   hover:scale-110 transition"
+                   hover:scale-105 transition"
       >
         <FaGreaterThan />
       </button>

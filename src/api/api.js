@@ -4,7 +4,8 @@ export const api = [
     address: "Services & Solutions",
     descrption:
       "At NUVIX, we provide end-to-end IT services and technology solutions that help businesses innovate, scale, and stay competitive. From software and hardware to cloud, security, and consulting, we deliver reliable, future-ready IT ecosystems.",
-    btn: "Learn More"
+    btn: "Explore Services",
+    btn2: "Request a Quote"
   },
 
   {
@@ -12,7 +13,8 @@ export const api = [
     address: "Enterprise Software Solutions",
     descrption:
       "We offer genuine, industry-leading software licenses for startups to enterprise organizations. Our services ensure seamless procurement, compliance, cost-effectiveness, and scalability for business growth.",
-    btn: "Get License"
+    btn: "Explore Software",
+    btn2: "Request a Quote"
   },
 
   {
@@ -20,7 +22,8 @@ export const api = [
     address: "IT Hardware & Infrastructure",
     descrption:
       "From servers and workstations to networking equipment and peripherals, we provide reliable, high-performance hardware solutions tailored to your business requirements.",
-    btn: "Buy Hardware"
+    btn: "Explore Hardware",
+    btn2: "Request a Quote"
   },
 
   {
@@ -28,7 +31,8 @@ export const api = [
     address: "Cloud, Data Center & Virtualization",
     descrption:
       "Public, private, and hybrid cloud deployments, data center migration, virtualization, backup, disaster recovery, and business continuity solutions.",
-    btn: "Explore Cloud"
+    btn: "Explore Cloud",
+    btn2: "Request a Quote"
   },
 
   {
@@ -36,7 +40,8 @@ export const api = [
     address: "24/7 IT Support & Monitoring",
     descrption:
       "End-to-end IT operations management including system monitoring, cybersecurity, network management, helpdesk support, and proactive maintenance.",
-    btn: "Contact Support"
+    btn: "Explore IT",
+    btn2: "Request a Quote"
   },
 
   {
@@ -44,7 +49,8 @@ export const api = [
     address: "Cybersecurity & Risk Management",
     descrption:
       "Cybersecurity assessments, threat detection, endpoint and cloud security, compliance audits (ISO, GDPR), incident response, and risk mitigation.",
-    btn: "Secure Now"
+    btn: "Explore Security",
+    btn2: "Request a Quote"
   },
 
   {
@@ -52,6 +58,7 @@ export const api = [
     address: "Your Trusted Technology Partner",
     descrption:
       "We combine expertise, innovation, and a customer-first approach to deliver scalable, future-proof IT solutions with certified experts and proven processes.",
-    btn: "Partner With Us"
+    btn: "Explore NUVIX",
+    btn2: "Request a Quote"
   }
 ];

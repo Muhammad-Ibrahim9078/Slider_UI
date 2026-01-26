@@ -10,7 +10,7 @@ function IndexNo({ activeIndex }) {
                     text-4xl flex items-center justify-center
                     transition-all duration-300
                     hover:scale-110" id='text'>
-      {`${activeIndex + 1}`}
+      {`0${activeIndex + 1}`}
 
     </div>
   )

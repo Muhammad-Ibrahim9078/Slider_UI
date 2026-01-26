@@ -2,7 +2,7 @@
 
 
 #text{
-    font-family: bebas;
+    font-family: sans-serif;
 }
 
 @font-face {
@@ -11,23 +11,36 @@
 }
 
 
-@media (min-width: 300px) and (max-width: 450px) {
+@media (min-width: 300px) and (max-width: 500px) {
 
     #forMobile{
-        position: absolute;
-        justify-content: center;
-        bottom: -15px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-wrap: wrap;
+       margin-bottom: 20px;
     }
+
+    #resForMobile{
+        /* padding-bottom: 0px; */
+        margin-bottom: -290px;
+    }
+
+    #loader{
+        position: absolute;
+        left: 120px;
+        bottom: 2px;
+    }
+
 
     #text{
-        font-size: 65px;
-    }
-
-    #margin{
-        margin-top: 80px;
+        font-size: 50px;
     }
 
     #cards{
+        visibility: hidden;
+    }
+    #hide{
         visibility: hidden;
     }
 
