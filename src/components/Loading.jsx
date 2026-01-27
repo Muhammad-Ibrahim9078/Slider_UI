@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { motion } from "framer-motion";
 
 function Loading({ activeIndex, total }) {
@@ -30,7 +30,7 @@ function Loading({ activeIndex, total }) {
                 opacity: isActive || isPassed ? 1 : 0.4,
               }}
               transition={{
-                duration: 0.45,
+                duration: 0.35,
                 ease: "easeInOut",
               }}
             />
@@ -40,14 +40,14 @@ function Loading({ activeIndex, total }) {
 
       {/* PROGRESS BAR */}
       <div className="w-[360px]" id="hide">
-        <div className="relative h-[3px] rounded-full bg-white/10 overflow-hidden">
+        <div className="relative h-[3px] rounded-full bg-white/10 overflow-hidden" id="progress">
           {/* Glow */}
           <motion.div
             className="absolute top-1/2 -translate-y-1/2 h-[8px]
                        bg-yellow-400/40 blur-md rounded-full"
             initial={false}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.45, ease: "easeInOut" }}
           />
 
           {/* Main Bar */}
@@ -56,7 +56,7 @@ function Loading({ activeIndex, total }) {
                        bg-gradient-to-r from-yellow-300 via-yellow-400 to-amber-500"
             initial={false}
             animate={{ width: `${progress}%` }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
+            transition={{ duration: 0.45, ease: "easeInOut" }}
           />
         </div>
       </div>
@@ -64,4 +64,4 @@ function Loading({ activeIndex, total }) {
   );
 }
 
-export default Loading;
+export default memo(Loading);

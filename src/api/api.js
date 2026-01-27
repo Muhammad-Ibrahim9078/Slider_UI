@@ -48,7 +48,7 @@ export const api = [
     title: "Security & Compliance Solutions",
     address: "Cybersecurity & Risk Management",
     descrption:
-      "Cybersecurity assessments, threat detection, endpoint and cloud security, compliance audits (ISO, GDPR), incident response, and risk mitigation.",
+      "",
     btn: "Explore Security",
     btn2: "Request a Quote"
   },

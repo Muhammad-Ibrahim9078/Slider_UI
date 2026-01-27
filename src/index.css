@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 
-#text{
-    font-family: sans-serif;
+body {
+  font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 }
 
 @font-face {
@@ -23,13 +23,13 @@
 
     #resForMobile{
         /* padding-bottom: 0px; */
-        margin-bottom: -290px;
+        margin-bottom: -250px;
     }
 
     #loader{
         position: absolute;
         left: 120px;
-        bottom: 2px;
+        bottom: 25px;
     }
 
 
@@ -41,7 +41,59 @@
         visibility: hidden;
     }
     #hide{
-        visibility: hidden;
+        filter: blur(5px);
+    }
+
+}
+
+
+
+
+
+@media (min-width: 500px) and (max-width: 840px) {
+    #progress{
+        visibility: hide;
+    }
+}
+
+
+@media (min-width: 501px) and (max-width: 1513px) {
+
+    #tabMar{
+        margin-top: 240px;
+    }
+
+    #tabRes{
+        display: grid;
+        grid-template-columns: auto;
+
+    }
+
+    #controls{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+ 
+    #text{
+        font-size: 50px;
+    }
+
+    #index{
+        position: absolute;
+        right: 20px;
+        
+    }
+
+    #cards{
+        position: relative;
+        top: -280px;
+    }
+
+    #buttons{
+        position: absolute;
+        left: 30px;
     }
 
 }
