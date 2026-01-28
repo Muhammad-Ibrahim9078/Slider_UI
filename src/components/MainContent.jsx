@@ -137,15 +137,18 @@ function MainContent({
           key={index}
           layoutId={`image-${index}`}
           onClick={() => setActiveIndex(index)}
-          transition={{ duration: 0.8, ease: "easeInOut" }}
+         /* 🧠 Smooth scroll feel */
+  initial={{ x: 80, opacity: 0 }}
+  animate={{ x: 0, opacity: 1 }}
+  exit={{ x: -80, opacity: 0 }}
 
-          /* 🔥 MAGIC LINE */
-          style={{ zIndex: visibleCards.length - order }}
+  transition={{
+    duration: 0.9,
+    ease: "easeInOut"
+  }}
 
-          className="relative mt-5 w-42 h-60 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
-          initial={{ y: 30, opacity: 0 }}
-          animate={{ y: 20, opacity: 1 }}
-          exit={{ y: -20, opacity: 0 }}
+  style={{ zIndex: visibleCards.length - order }}
+  className="relative mt-5 w-42 h-60 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
         >
           {/* Background */}
           <div
