@@ -61,8 +61,8 @@ body {
 @media (min-width: 501px) and (max-width: 639px) {
  
     #cards{
-        /* visibility: hidden; */
-        margin-top: 80px;
+        visibility: hidden;
+        /* margin-top: 80px; */
     }
     #hide{
         visibility: hidden;
@@ -70,17 +70,28 @@ body {
     #loader{
         margin-left: 300px;
     }
+
+
+}
+
+
+@media (min-width: 1020px) and (max-width: 1390px) {
+    #resForMobile{
+        top: 25px;
+    }
+    
+
 }
 
 
 @media (min-width: 501px) and (max-width: 1513px) {
-
+ 
     #tabMar{
         margin-top: 270px;
     }
 
     #resForMobile{
-        margin-bottom: -20px;
+        margin-bottom: -80px;
     }
 
     #tabRes{
@@ -106,9 +117,15 @@ body {
         
     }
 
+    #cardHight{
+        height: 200px;
+        width: 150px;
+        margin-top: 70px;
+    }
+
     #cards{
         position: relative;
-        top: -330px;
+        top: -300px;
     }
 
     #buttons{

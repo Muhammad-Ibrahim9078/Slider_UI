@@ -20,7 +20,7 @@ function MainContent({
   function getVisibleCardCount() {
     const width = window.innerWidth;
 
-    if (width <= 900) return 4;
+    if (width <= 900) return 5;
 
     if (width >= 901 && width < 1515) return 6;
     if (width >= 502 && width < 775) return 4;
@@ -105,7 +105,7 @@ function MainContent({
                 </p>
 
                 {/* BUTTONS */}
-                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-stretch sm:items-center mt-4 md:mt-6">
+                <div className="flex flex-col sm:flex-row gap-4 md:gap-6 items-stretch sm:items-center mt-4 md:mt-6" id="clickBtn">
                   {/* GOLD BUTTON */}
                   <button className="bg-gradient-to-r from-[#FFD700] via-[#FFCC33] to-[#C99700] text-black flex items-center justify-center gap-2 md:gap-3 font-extrabold cursor-pointer rounded-full px-5 md:px-6 py-2.5 md:py-3 text-sm md:text-base shadow-lg shadow-yellow-500/30 transition-all duration-300 ease-out hover:shadow-yellow-500/60 hover:brightness-110 active:scale-95">
                     {api[activeIndex].btn}
@@ -133,6 +133,7 @@ function MainContent({
 
       return (
         <motion.div
+        id="cardHight"
           key={index}
           layoutId={`image-${index}`}
           onClick={() => setActiveIndex(index)}
