@@ -62,7 +62,7 @@ body {
  
     #cards{
         /* visibility: hidden; */
-        margin-top: 50px;
+        margin-top: 80px;
     }
     #hide{
         visibility: hidden;
@@ -80,7 +80,7 @@ body {
     }
 
     #resForMobile{
-        margin-bottom: 10px;
+        margin-bottom: -20px;
     }
 
     #tabRes{
@@ -108,12 +108,13 @@ body {
 
     #cards{
         position: relative;
-        top: -310px;
+        top: -330px;
     }
 
     #buttons{
         position: absolute;
         left: 30px;
     }
+
 
 }

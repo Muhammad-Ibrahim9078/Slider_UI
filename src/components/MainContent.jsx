@@ -16,34 +16,33 @@ function MainContent({
   prevSlide,
 }) {
 
-  // 1️⃣ Function to determine how many cards to show based on screen width
+  // ✅ ONLY CHANGE: screen 1515 se choti ho to sirf 5 cards
   function getVisibleCardCount() {
     const width = window.innerWidth;
 
-    // if (width < 840) return 2;
-    // if (width >= 840 && width < 899) return 5;
-    if (width >= 900 && width < 1100) return 7;
-    if (width >= 1125 && width < 1300) return 7;
+    if (width <= 900) return 4;
 
-    return 5; // large screens
+    if (width >= 901 && width < 1515) return 6;
+    if (width >= 502 && width < 775) return 4;
+
+    return 5;
   }
 
-  // 2️⃣ Dynamic visible cards
   const visibleCount = getVisibleCardCount();
   const visibleCards = [];
   for (let i = 0; i < visibleCount; i++) {
     visibleCards.push((activeIndex + i) % images.length);
   }
 
-  // 3️⃣ Update visible cards on window resize
   React.useEffect(() => {
     function handleResize() {
-      setActiveIndex(prev => prev); // simple re-render trigger
+      setActiveIndex(prev => prev);
     }
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
 
   return (
     <div className="w-full h-screen relative overflow-hidden bg-black" >
@@ -142,7 +141,7 @@ function MainContent({
           /* 🔥 MAGIC LINE */
           style={{ zIndex: visibleCards.length - order }}
 
-          className="relative w-45 h-65 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
+          className="relative mt-5 w-42 h-60 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 20, opacity: 1 }}
           exit={{ y: -20, opacity: 0 }}
