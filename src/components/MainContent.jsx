@@ -20,9 +20,9 @@ function MainContent({
   function getVisibleCardCount() {
     const width = window.innerWidth;
 
-    if (width < 840) return 2;
-    if (width >= 840 && width < 899) return 5;
-    if (width >= 900 && width < 1100) return 6;
+    // if (width < 840) return 2;
+    // if (width >= 840 && width < 899) return 5;
+    if (width >= 900 && width < 1100) return 7;
     if (width >= 1125 && width < 1300) return 7;
 
     return 5; // large screens
@@ -124,34 +124,52 @@ function MainContent({
           </div>
 
           {/* RIGHT CARDS WITH HEADINGS */}
-          <motion.div className="flex gap-3 md:gap-4 h-auto md:h-72 mt-8 md:mt-12 lg:mt-20 overflow-x-auto md:overflow-visible pb-2 md:pb-0 w-full lg:w-auto scrollbar-hide" id="cards">
-            {visibleCards.map((index) => {
-              if (index === activeIndex) return null;
+<motion.div
+  className="flex gap-3 md:gap-4 h-auto md:h-72 mt-8 md:mt-12 lg:mt-20 overflow-x-auto md:overflow-visible pb-2 md:pb-0 w-full lg:w-auto scrollbar-hide"
+  id="cards"
+>
+  <AnimatePresence mode="popLayout">
+    {visibleCards.map((index, order) => {
+      if (index === activeIndex) return null;
 
-              return (
-                <motion.div
-                  key={index}
-                  layoutId={`image-${index}`}
-                  onClick={() => setActiveIndex(index)}
-                  transition={{ duration: 0.9, ease: "easeInOut" }}
-                  className="relative w-45 h-65 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
-                  style={{
-                    backgroundImage: `url(${images[index]})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  {/* Overlay */}
-                  <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/20" />
+      return (
+        <motion.div
+          key={index}
+          layoutId={`image-${index}`}
+          onClick={() => setActiveIndex(index)}
+          transition={{ duration: 0.8, ease: "easeInOut" }}
 
-                  {/* Heading inside card */}
-                  <h3 className="absolute bottom-3 left-3 text-white font-bold text-sm z-10 drop-shadow-md">
-                    {api[index].title}
-                  </h3>
-                </motion.div>
-              );
-            })}
-          </motion.div>
+          /* 🔥 MAGIC LINE */
+          style={{ zIndex: visibleCards.length - order }}
+
+          className="relative w-45 h-65 rounded-xl cursor-pointer shadow-2xl shadow-gray-500 overflow-hidden group"
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 20, opacity: 1 }}
+          exit={{ y: -20, opacity: 0 }}
+        >
+          {/* Background */}
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url(${images[index]})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/20" />
+
+          {/* Heading */}
+          <h3 className="absolute bottom-3 left-3 text-white font-bold text-sm z-10 drop-shadow-md">
+            {api[index].title}
+          </h3>
+        </motion.div>
+      );
+    })}
+  </AnimatePresence>
+</motion.div>
+
         </section>
 
         {/* BOTTOM CONTROLS */}

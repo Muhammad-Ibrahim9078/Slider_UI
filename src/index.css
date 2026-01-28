@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
 
+#cards{
+    margin-left: 10px;
+}
+
 body {
   font-family: 'Inter', -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
 }
@@ -28,8 +32,8 @@ body {
 
     #loader{
         position: absolute;
-        left: 120px;
-        bottom: 25px;
+        left: 115px;
+        bottom: 20px;
     }
 
 
@@ -44,15 +48,27 @@ body {
         filter: blur(5px);
     }
 
+    #loader{
+        width: 50%;
+    }
+
 }
 
 
 
 
 
-@media (min-width: 500px) and (max-width: 840px) {
-    #progress{
-        visibility: hide;
+@media (min-width: 501px) and (max-width: 639px) {
+ 
+    #cards{
+        /* visibility: hidden; */
+        margin-top: 50px;
+    }
+    #hide{
+        visibility: hidden;
+    }
+    #loader{
+        margin-left: 300px;
     }
 }
 
@@ -60,7 +76,11 @@ body {
 @media (min-width: 501px) and (max-width: 1513px) {
 
     #tabMar{
-        margin-top: 240px;
+        margin-top: 270px;
+    }
+
+    #resForMobile{
+        margin-bottom: 10px;
     }
 
     #tabRes{
@@ -88,7 +108,7 @@ body {
 
     #cards{
         position: relative;
-        top: -280px;
+        top: -310px;
     }
 
     #buttons{
